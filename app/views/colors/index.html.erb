@@ -1,0 +1,8 @@
+<% @colors.each do |color| %>
+  <%= color.name %></br>
+  <%= color.popularity %> popular</br>
+  <%= link_to 'Edit Color', edit_color_path(color) %>
+  <%= link_to 'Delete Color', color_path(color), data: {confirm: "Are you sure?"}, method: :delete %>
+<% end %>
+
+<%= link_to 'Back to the home page', root_path %>
